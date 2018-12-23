@@ -5,3 +5,5 @@ services:
 before_install:
 	- docker build -t exoplusplus/boots .
 
+script:
+	- docker run exoplusplus/boots links -dump docker.etailer.rs	
