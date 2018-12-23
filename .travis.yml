@@ -6,7 +6,7 @@ before_install:
   - docker build -t exoplusplus/boots .
 
 script:
-  - docker run exoplusplus/boots links 
+  - docker run exoplusplus/boots 
 
 deploy: 
   provider: azure_web_apps
