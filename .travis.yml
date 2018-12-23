@@ -7,3 +7,10 @@ before_install:
 
 script:
 	- docker run exoplusplus/boots links -dump docker.etailer.rs	
+
+deploy: 
+	provider: azure_web_apps
+	username: "$user"
+	password: "$pass"
+	site: "myboots"
+	
