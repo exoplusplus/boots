@@ -1,16 +1,15 @@
-sudo: required
-services:
-  - docker
+  sudo: required
+  services:
+    - docker
   
-before_install:
-	- docker build -t exoplusplus/boots .
+  before_install:
+	  - docker build -t exoplusplus/boots .
 
-script:
-	- docker run exoplusplus/boots links -dump docker.etailer.rs	
+  script:
+	  - docker run exoplusplus/boots links -dump docker.etailer.rs	
 
-deploy: 
-	provider: azure_web_apps
-	username: "$user"
-	password: "$pass"
-	site: "myboots"
+  deploy: 
+	  provider: azure_web_apps
+	  username: $user
+	  password: $pass
 	
